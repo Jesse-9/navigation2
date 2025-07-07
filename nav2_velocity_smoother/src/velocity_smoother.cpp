@@ -55,10 +55,6 @@ VelocitySmoother::on_configure(const rclcpp_lifecycle::State & state)
   declare_parameter_if_not_declared(node, "smoothing_frequency", rclcpp::ParameterValue(20.0));
   declare_parameter_if_not_declared(
     node, "feedback", rclcpp::ParameterValue(std::string("OPEN_LOOP")));
-  declare_parameter_if_not_declared(node, "scale_velocities", rclcpp::ParameterValue(false));
-  node->get_parameter("smoothing_frequency", smoothing_frequency_);
-  node->get_parameter("feedback", feedback_type);
-  node->get_parameter("scale_velocities", scale_velocities_);
 
   // Kinematics
   declare_parameter_if_not_declared(
