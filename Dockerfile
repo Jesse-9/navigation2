@@ -9,7 +9,7 @@
 
 # clone underlay source
 ARG UNDERLAY_WS
-WORKDIR $UNDERLAY_WS/src
+1111
 COPY ./tools/underlay.repos ../
 RUN vcs import ./ < ../underlay.repos
 
