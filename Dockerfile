@@ -6,12 +6,6 @@
 # docker build -t nav2:latest \
 #   --build-arg UNDERLAY_MIXINS \
 #   --build-arg OVERLAY_MIXINS ./
-ARG FROM_IMAGE=ros:rolling
-ARG UNDERLAY_WS=/opt/underlay_ws
-ARG OVERLAY_WS=/opt/overlay_ws
-
-# multi-stage for caching
-FROM $FROM_IMAGE AS cacher
 
 # clone underlay source
 ARG UNDERLAY_WS
